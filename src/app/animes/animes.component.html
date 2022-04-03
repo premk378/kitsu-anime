@@ -1,8 +1,13 @@
 <div class="ui segment">
   <div class="ui link stackable cards animes">
-    <div class="card anime-item" *ngFor="let anime of animes" [routerLink]="['/anime-details']" [queryParams]="{id: anime.id}">
+    <div
+      class="card anime-item"
+      *ngFor="let anime of animes"
+      [routerLink]="['/anime-details']"
+      [queryParams]="{ id: anime.id }"
+    >
       <div class="image">
-        <img [src]="anime.attributes?.posterImage?.small"/>
+        <img [src]="anime.attributes?.posterImage?.small" />
       </div>
       <div class="content">
         <div class="header">{{ anime.attributes?.canonicalTitle }}</div>

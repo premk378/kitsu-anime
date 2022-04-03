@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Anime } from '../models/anime-model';
 import { KitsuService } from '../services/kitsu.service';
 
 
@@ -10,7 +11,7 @@ import { KitsuService } from '../services/kitsu.service';
 
 export class AnimesComponent implements OnInit {
 
-  animes: any[] = [];
+  animes: Anime[] = [];
   yOffset = 2000;
   initialSize = 18;
   pageOffset = 0;
@@ -18,9 +19,15 @@ export class AnimesComponent implements OnInit {
   constructor(private kitsu: KitsuService) { }
 
   ngOnInit(): void {
+    for(let i=0; i<3; i++) {
+      this.getAnimes();
+      this.pageOffset += this.initialSize;
+    }
+  }
+
+  getAnimes() {
     this.kitsu.getAnimes(this.initialSize,this.pageOffset).subscribe(res => {
-      this.animes = res.data;
-      this.pageOffset = this.initialSize;
+      this.animes.push(...res.data);
     });
   }
 

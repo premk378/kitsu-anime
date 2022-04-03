@@ -27,3 +27,10 @@
 .title h1 {
     font-size: 32px;
 }
+
+.synopsis {
+    text-align: justify;
+    text-justify: inter-word;
+    padding: 10px;
+    font-size: large;
+}

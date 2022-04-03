@@ -35,9 +35,10 @@
             </div>
           </div>
         </div>
-        <h4>{{anime.attributes?.synopsis}}</h4>
+        <div class="synopsis">{{anime.attributes?.synopsis}}</div>
         <p>Start Date: <span>{{anime.attributes?.startDate | date}}</span></p>
         <p>End Date: <span>{{anime.attributes?.endDate | date}}</span></p>
+        <a class="ui tag label" *ngFor="let gen of genres">{{gen.attributes.name}}</a>
     </div>
 </div>
 <!-- <div class="ui segment">
