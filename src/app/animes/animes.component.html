@@ -1,0 +1,27 @@
+<div class="ui segment">
+  <div class="ui link stackable cards animes">
+    <div class="card anime-item" *ngFor="let anime of animes" [routerLink]="['/anime-details']" [queryParams]="{id: anime.id}">
+      <div class="image">
+        <img [src]="anime.attributes?.posterImage?.small"/>
+      </div>
+      <div class="content">
+        <div class="header">{{ anime.attributes?.canonicalTitle }}</div>
+        <div class="meta">
+          <a>{{ anime.attributes?.showType | uppercase }}</a>
+        </div>
+        <div class="description">
+          {{ anime.attributes?.ageRatingGuide }}
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="right floated">{{
+          anime.attributes?.startDate | date
+        }}</span>
+        <span>
+          <i class="star icon"></i>
+          {{ anime.attributes?.favoritesCount }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

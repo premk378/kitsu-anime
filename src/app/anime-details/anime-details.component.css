@@ -1,0 +1,29 @@
+.cover-image {
+    display: flex;
+    box-shadow: 2px 8px 8px 8px #eee;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.image {
+    flex-basis: 30%;
+}
+
+.info {
+    flex-basis: 70%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title h1 {
+    font-size: 32px;
+}

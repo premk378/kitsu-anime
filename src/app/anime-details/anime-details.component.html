@@ -1,0 +1,65 @@
+<div class="cover-image" *ngIf="anime.attributes?.coverImage">
+  <img [src]="anime.attributes?.coverImage?.small" width="100%" />
+</div>
+<div class="details">
+    <div class="image">
+        <img [src]="anime.attributes?.posterImage?.small"/>
+    </div>
+    <div class="info">
+        <div class="title">
+        <h1>{{anime.attributes?.canonicalTitle}}</h1>
+        <div class="ui mini statistics">
+            <div class="statistic">
+              <div class="value">
+                {{anime.attributes?.popularityRank}}
+              </div>
+              <div class="label">
+                Popularity Rank
+              </div>
+            </div>
+            <div class="statistic">
+              <div class="value">
+                {{anime.attributes?.ratingRank}}
+              </div>
+              <div class="label">
+                Rating Rank
+              </div>
+            </div>
+            <div class="statistic">
+              <div class="value">
+                {{anime.attributes?.averageRating}}
+              </div>
+              <div class="label">
+                Average Rating
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4>{{anime.attributes?.synopsis}}</h4>
+        <p>Start Date: <span>{{anime.attributes?.startDate | date}}</span></p>
+        <p>End Date: <span>{{anime.attributes?.endDate | date}}</span></p>
+    </div>
+</div>
+<!-- <div class="ui segment">
+  <div class="ui stackable grid container">
+    <div class="row">
+        <div class="six wide right floated column">
+            <img [src]="anime.attributes?.posterImage?.original" class="ui large bordered rounded image"/>
+          </div>
+      <div class="ten wide column">
+        <h3 class="ui header">We Help Companies and Companions</h3>
+        <p>
+          We can give your company superpowers to do things that they never
+          thought possible. Let us delight your customers and empower your
+          needs...through pure data analytics.
+        </p>
+        <h3 class="ui header">We Make Bananas That Can Dance</h3>
+        <p>
+          Yes that's right, you thought it was the stuff of dreams, but even
+          bananas can be bioengineered.
+        </p>
+      </div>
+      
+    </div>
+  </div>
+</div> -->
