@@ -4,18 +4,17 @@
 }
 
 .details {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     padding: 30px;
-    flex-wrap: wrap;
 }
 
 .image {
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
 
 .info {
-    flex-basis: 70%;
+    flex-basis: 75%;
 }
 
 .title {
@@ -26,11 +25,85 @@
 
 .title h1 {
     font-size: 32px;
+    color: rgb(17, 58, 119);
+    font-family: 'Poppins', cursive;
 }
 
 .synopsis {
     text-align: justify;
     text-justify: inter-word;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.nav {
+    display: flex;
     padding: 10px;
-    font-size: large;
+    background-color: black;
+}
+
+.menus {
+    display: flex;
+    background-color: black;
+    margin-top: 0px;
+}
+
+.menus li {
+    padding: 10px;
+    list-style-type: none;
+    font-size: 16px;
+    margin: 5px;
+    color: #eee;
+    font-weight: bold;
+    font-family: 'Quicksand';
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.menus li:hover,
+.menus li.active {
+    background-color: #eee;
+    color: rgb(17, 58, 119);
+}
+
+.stat-list{
+    display: flex;
+}
+.stat {
+    padding: 16px;
+    flex-basis: 20%;
+    border-left: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+}
+
+.label{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(50, 79, 122);
+    font-weight: bolder;
+}
+
+.value {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.attr {
+    font-family: 'Noto Sans';
+    font-size: 14px;
+}
+
+.attr span {
+    color: #000;
+    font-weight: bolder;
+}
+
+.tags {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }

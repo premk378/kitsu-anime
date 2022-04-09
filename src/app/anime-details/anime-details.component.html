@@ -1,66 +1,78 @@
 <div class="cover-image" *ngIf="anime.attributes?.coverImage">
   <img [src]="anime.attributes?.coverImage?.small" width="100%" />
 </div>
-<div class="details">
-    <div class="image">
+<nav>
+  <ul class="menus">
+    <li class="active">OVERVIEW</li>
+    <li>CHARCTERS</li>
+    <li>REVIEWS</li>
+  </ul>
+</nav>
+<div class="stat-list">
+  <div class="stat">
+    <div class="statistic">
+      <div class="value">
+        {{anime.attributes?.episodeCount}} eps X {{anime.attributes?.episodeLength}} mins      </div>
+      <div class="label">
+        {{anime.attributes?.showType}}
+      </div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="statistic">
+      <div class="value">
+        {{anime.attributes?.ageRatingGuide}}
+      </div>
+      <div class="label">
+        Age Rating
+      </div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="statistic">
+      <div class="value">
+        {{anime.attributes?.popularityRank}}
+      </div>
+      <div class="label">
+        Popularity Rank
+      </div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="statistic">
+      <div class="value">
+        {{anime.attributes?.ratingRank}}
+      </div>
+      <div class="label">
+        Rating Rank
+      </div>
+    </div>
+  </div>
+  <div class="stat">
+    <div class="statistic">
+      <div class="value">
+        {{anime.attributes?.averageRating}}
+      </div>
+      <div class="label">
+        Average Rating
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui stackable grid details">
+    <div class="four wide column">
         <img [src]="anime.attributes?.posterImage?.small"/>
     </div>
-    <div class="info">
+    <div class="twelve wide column">
         <div class="title">
-        <h1>{{anime.attributes?.canonicalTitle}}</h1>
-        <div class="ui mini statistics">
-            <div class="statistic">
-              <div class="value">
-                {{anime.attributes?.popularityRank}}
-              </div>
-              <div class="label">
-                Popularity Rank
-              </div>
-            </div>
-            <div class="statistic">
-              <div class="value">
-                {{anime.attributes?.ratingRank}}
-              </div>
-              <div class="label">
-                Rating Rank
-              </div>
-            </div>
-            <div class="statistic">
-              <div class="value">
-                {{anime.attributes?.averageRating}}
-              </div>
-              <div class="label">
-                Average Rating
-              </div>
-            </div>
-          </div>
+          <h1>{{anime.attributes?.canonicalTitle}}</h1>
         </div>
         <div class="synopsis">{{anime.attributes?.synopsis}}</div>
-        <p>Start Date: <span>{{anime.attributes?.startDate | date}}</span></p>
-        <p>End Date: <span>{{anime.attributes?.endDate | date}}</span></p>
+        <hr>
+        <p class="attr">Start Date: <span>{{anime.attributes?.startDate | date}}</span></p>
+        <p class="attr">End Date: <span>{{anime.attributes?.endDate | date}}</span></p>
+        <hr>
+        <p class="tags">Tags</p>
         <a class="ui tag label" *ngFor="let gen of genres">{{gen.attributes.name}}</a>
     </div>
 </div>
-<!-- <div class="ui segment">
-  <div class="ui stackable grid container">
-    <div class="row">
-        <div class="six wide right floated column">
-            <img [src]="anime.attributes?.posterImage?.original" class="ui large bordered rounded image"/>
-          </div>
-      <div class="ten wide column">
-        <h3 class="ui header">We Help Companies and Companions</h3>
-        <p>
-          We can give your company superpowers to do things that they never
-          thought possible. Let us delight your customers and empower your
-          needs...through pure data analytics.
-        </p>
-        <h3 class="ui header">We Make Bananas That Can Dance</h3>
-        <p>
-          Yes that's right, you thought it was the stuff of dreams, but even
-          bananas can be bioengineered.
-        </p>
-      </div>
-      
-    </div>
-  </div>
-</div> -->
